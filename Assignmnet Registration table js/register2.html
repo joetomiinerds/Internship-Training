@@ -1,0 +1,375 @@
+<!--Joe Tom Thomas Registration page -->
+<html>
+<head>
+<script type="text/javascript" >
+	
+	function valNm()          //function for First Name
+	  {
+	  var name1=document.forms["regForm"]["nme10"];
+	  var nj10=/^[a-z A-Z]{3,}$/;
+	  if(name1.value.match(nj10))
+	  {
+	  document.getElementById("p1").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p1").innerHTML="Enter correct First name";
+	  nm1.focus();
+	  //return false;
+	  }
+	  }
+      function valNm1()          //function for Last Name
+	  {
+	  var name9=document.forms["regForm"]["nme2"];
+	  var nj7=/^[a-z A-Z]{3,}$/;
+	  if(name9.value.match(nj7))
+	  {
+	  document.getElementById("p8").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p8").innerHTML="Enter correct Last name";
+	  nm2.focus();
+	  //return false;
+	  }
+	  }
+	  function valAd()          //function for Address
+	  {
+	  var name2=document.forms["regForm"]["address"];
+	  var nj1=/^[a-z A-Z 0-9]{3,}$/;
+	  if(name2.value.match(nj1))
+	  {
+	  document.getElementById("p2").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p2").innerHTML="Enter correct address";
+	  ad1.focus();
+	  //return false;
+	  }
+	  }
+	  
+	   function valPh()          //function for Phone Number
+	  {
+	  var name4=document.forms["regForm"]["phone"];
+	  var nj3=/^[7-9][0-9]{9}$/;
+	  if(name4.value.match(nj3))
+	  {
+	  document.getElementById("p4").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p4").innerHTML="Enter correct phone number";
+	  ph1.focus();
+	  //return false;
+	  }
+	  }
+      function valzh()          //function for zipcode
+	  {
+	  var name8=document.forms["regForm"]["zip"];
+	  var nj6=/^[1-9][0-9]{5}$/;
+	  if(name8.value.match(nj6))
+	  {
+	  document.getElementById("p9").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p9").innerHTML="Enter correct Zip code";
+	  zh1.focus();
+	  //return false;
+	  }
+	  }
+      function valst()          //function for State
+      {
+        var name10=document.getElementById("inputState").value;
+        if (name10 == "0") 
+        {
+            document.getElementById("p11").innerHTML="Select State";
+        }
+        else
+        {
+            document.getElementById("p11").innerHTML="";
+        }
+      }
+      function valcity()          //function for city
+      {
+          var name11=document.forms["regForm"]["cty"];
+          var nj8=/^[a-z A-Z]{3,}$/;
+	  if(name11.value.match(nj8))
+	  {
+	  document.getElementById("p12").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p12").innerHTML="Enter correct City";
+	  cty.focus();
+	  //return false;
+	  }
+      }
+      function valEm()          //function for Email
+	  {
+	  var name3=document.forms["regForm"]["email"];
+	  var nj2=/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$/;
+	  if(name3.value.match(nj2))
+	  {
+	  document.getElementById("p3").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p3").innerHTML="Enter correct email";
+	  em1.focus();
+	  //return false;
+	  }
+	  }
+      function valEm1()         //function for Confirm email
+	  {
+	   var name12=document.forms["regForm"]["email"];
+	   var name13=document.forms["regForm"]["email1"];
+       var nj9=/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$/;
+	  if(name12.value.match(nj9))
+	  {
+	  document.getElementById("p10").innerHTML="";
+      if(name12.value==name13.value)
+	  {
+	  document.getElementById("p10").innerHTML="";
+	  }
+      else
+	  {
+	  document.getElementById("p10").innerHTML="Enter correct Confirm Email";
+	  em2.focus();
+	  //return false;
+	  }
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p10").innerHTML="Enter correct Confirm Email";
+	  em2.focus();
+	  //return false;
+	  }
+	  }
+	  function valPs()          //function for Password
+	  {
+	  var name6=document.forms["regForm"]["upass"];
+	  var nj5=/^(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+
+
+
+      var myInput = document.getElementById("ps1");
+      myInput.onkeyup = function() 
+      {
+      var psck1=/^[a-zA-z].{0,}$/;//To check one alphabet added     
+      var psck2=/[0-9].{0,}/g;//To check one number added   
+      var psck3=/[-’/`~!#*$@_%+=.,^&(){}[\]|;:”<>?\\]/g;// To check one special character added
+      if(name6.value.match(psck2))//To check one number added  
+      {
+          document.getElementById("rd3").checked=true;
+          document.getElementById("rd3").disabled = false;
+      }
+      else
+      {
+        document.getElementById("rd3").checked=false;
+        document.getElementById("rd3").disabled = true;
+      }
+      if(name6.value.match(psck1))//To check one alphabet added   
+      {
+          document.getElementById("rd2").checked=true;
+          document.getElementById("rd2").disabled = false;
+      }
+      else
+      {
+        document.getElementById("rd2").checked=false;
+        document.getElementById("rd2").disabled = true;
+      }
+      if(myInput.value.length >= 8) // To check 8 or more characters entered
+      {
+        document.getElementById("rd1").checked=true;
+        document.getElementById("rd1").disabled = false;
+      }
+      else
+      {
+        document.getElementById("rd1").checked=false;
+        document.getElementById("rd1").disabled = true;
+      }
+      if(name6.value.match(psck3))// To check one special character added
+      {
+        document.getElementById("rd4").checked=true;
+        document.getElementById("rd4").disabled = false;
+       
+      }
+      else
+      {
+        document.getElementById("rd4").checked=false;
+        document.getElementById("rd4").disabled = true;
+      }
+    }
+	  if(name6.value.match(nj5))
+	  {
+	  document.getElementById("p6").innerHTML="";
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p6").innerHTML="Enter correct password";
+	  ps1.focus();
+	  //return false;
+	  }
+	  }
+	  function valPs1()          //function for Confirm Password
+	  {
+	   var name6=document.forms["regForm"]["upass"];
+	   var name7=document.forms["regForm"]["cupass"];
+       var nj5=/^(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+	  if(name6.value.match(nj5))
+	  {
+	  document.getElementById("p7").innerHTML="";
+      if(name6.value==name7.value)
+	  {
+	  document.getElementById("p7").innerHTML="";
+	  }
+      else
+	  {
+	  document.getElementById("p7").innerHTML="Enter correct Confirm password";
+	  ps2.focus();
+	  //return false;
+	  }
+	  //return true;
+	  }
+	  else
+	  {
+	  document.getElementById("p7").innerHTML="Enter correct Confirm password";
+	  ps2.focus();
+	  //return false;
+	  }
+	  }
+      function valus() //function for creating new user
+      {
+          var pv1=document.getElementById("p1").textContent;
+          var pv2=document.getElementById("p2").textContent;
+          var pv3=document.getElementById("p3").textContent;
+          var pv4=document.getElementById("p4").textContent;
+          var pv5=document.getElementById("p6").textContent;
+          var pv6=document.getElementById("p7").textContent;
+          var pv7=document.getElementById("p8").textContent;
+          var pv8=document.getElementById("p9").textContent;
+          var pv9=document.getElementById("p10").textContent;
+          var pv10=document.getElementById("p11").textContent;
+          var pv11=document.getElementById("p12").textContent;
+
+          if (pv1 =="" && pv2 =="" && pv3 =="" && pv4 =="" && pv5 =="" && pv6 =="" && pv7 =="" && pv8 =="" && pv9 =="" && pv10 =="" && pv11 =="")
+          {
+              window.alert("User added......");//new user created if all textContents are null
+          }
+          else
+          {
+              window.alert("Existing errors are" + ' ' +pv1 + '  ' + pv7 + '  ' + pv2 + '  ' + pv8 + '  ' + pv4 + '  ' + pv10  + '  ' + pv11  + '  ' + pv3 + '  ' + pv9 + '  ' + pv5 + '  ' + pv6);
+          }
+      }
+    
+</script>
+<meta charset="utf-8">
+<title>register</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+     /* style for textbox line-->*/
+    .text-line {
+    background-color:white;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid black 1px;
+    padding: 3px 50px;
+}
+ /* style for registration div-->*/
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+</style>
+<body>
+<div class="center" style="width:600px;" >
+	<form name="regForm" class="row g-3">
+	
+        <div class="col-12"  style="text-align:center;">
+		    <label for="Registration" class="form-label">Registration</label> <!-- div for heading -->
+		</div>
+		<div class="col-md-6">
+            <label for="inputforfirstname" class="form-label">Enter First Name:</label> <!-- div for First Name -->
+			<input type="text"  class="text-line" name="nme10" class="form-control" onblur="valNm()" id="nm1"><p id="p1" style="color: red;"></p>
+        </div>
+        <div class="col-md-6">
+            <label for="inputforlastname" class="form-label">Enter Last Name:</label> <!-- div for Last Name -->
+			<input type="text"  class="text-line" name="nme2" class="form-control"  onblur="valNm1()" id="nm2"><p id="p8" style="color: red;"></p>
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Enter Address:</label> <!-- div for Address --><br>
+            <input type="text" name="address" class="text-line" onblur="valAd()"  id="ad1" ><p id="p2" style="color: red;"></p>
+        </div>
+        <div class="col-md-6">
+            <label for="inputZip" class="form-label">ZipCode:</label> <!-- div for zipcode -->
+            <input type="text" class="text-line" name="zip" onblur="valzh()" id="zh1" ><p id="p9" style="color: red;"></p>
+        </div>
+        <div class="col-md-6">
+            <label for="inputphonenumber" class="form-label">Enter phone:</label><!-- div for Phone number -->
+			<input type="text" class="text-line" name="phone" onblur="valPh()" id="ph1" ><p id="p4" style="color: red;"></p>
+		</div>
+        <div class="col-md-6"><!-- div for State -->
+            <label for="inputState" class="form-label">State</label><br>
+            <select id="inputState" class="form-select" onchange="valst()" required>
+              <option value="0" selected>Choose...</option>
+              <option value="Kerala">Kerala</option>
+              <option>...</option>
+              <option>...</option>
+            </select> <p id="p11" style="color: red;"></p>
+        </div>
+        <div class="col-md-6"><!-- div for city -->
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="text-line" name="nme1" class="form-control"  onblur="valcity()" id="cty"><p id="p12" style="color: red;"></p>
+        </div>
+		<div class="col-md-6"><!-- div for Email -->
+            <label for="inputEmail4" class="form-label">Enter Email:</label>
+			<input type="email" class="text-line" name="email" onblur="valEm()"  id="em1" ><p id="p3" style="color: red;"></p>
+		</div>
+		<div class="col-md-6"><!-- div for confirm Email -->
+            <label for="inputEmail4" class="form-label">Confirm Email:</label>
+			<input type="email" class="text-line" name="email1" onblur="valEm1()"  id="em2" ><p id="p10" style="color: red;"></p>
+		</div>
+        <div class="col-12"><!-- div for Password Hint -->
+            <label for="inputPassword" class="form-label">Enter new Password. Make sure to add following:</label><br>
+            <input type="radio" id="rd1" disabled> 8 Characters<br>
+            <input type="radio" id="rd2" disabled> 1 Letter<br>
+            <input type="radio" id="rd3" disabled> 1 Number<br>
+            <input type="radio" id="rd4" disabled> 1 Special Character<br>
+        </div>
+        <div class="col-md-6"><!-- div for Password -->
+            <label for="inputPassword" class="form-label">Set Password:</label>
+			<input type="password" class="text-line" name="upass" id="ps1" onblur="valPs();valpasst();"><p id="p6" style="color: red;"></p>
+        </div>
+		<div class="col-md-6"><!-- div for confirm Password -->
+            <label for="inputPassword" class="form-label">Confirm Password:</label>
+			<input type="password" class="text-line" name="cupass" id="ps2" onblur="valPs1()"><p id="p7" style="color: red;"></p>
+		</div>
+		
+		<div class="col-12" Style="text-align:center"; >
+		<input type="submit" value="Submit" class="btn btn-primary" class="text-line" onClick="valNm();valNm1();valzh();valPh();valst();valcity();valEm();valAd();valEm1();valPs();valPs1();valus();return false;">
+		</div>
+
+
+	</form>
+	</div>
+</body>
+</html>
